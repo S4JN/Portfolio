@@ -8,12 +8,40 @@ import nextjs from "../assets/nextjs.png";
 import graphql from "../assets/graphql.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import sol from "../assets/sol.png"
 import node from "../assets/node.png";
+import eth from "../assets/eth.png"
 import mongo from "../assets/mongo.png"
 import firebase from "../assets/firebase.png"
 
 const Experience = () => {
   const techs = [
+    {
+      id: 4,
+      src: reactImage,
+      title: "React",
+      style: "shadow-blue-600",
+    },
+    {
+      id: 6,
+      src: node,
+      title: "Node.js",
+      style: "shadow-green-600",
+    },
+    {
+      id: 9,
+      src: sol,
+      title: "Solidity",
+      style: "shadow-gray-400"
+    },
+
+    {
+      id: 7,
+      src: mongo,
+      title: "MongoDB",
+      style: "shadow-green-500",
+    },
+
     {
       id: 1,
       src: html,
@@ -33,35 +61,18 @@ const Experience = () => {
       style: "shadow-yellow-500",
     },
     {
-      id: 4,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 5,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-    },
-    {
-      id: 6,
-      src: node,
-      title: "Node.js",
-      style: "shadow-green-600",
-    },
-    {
-      id: 7,
-      src: mongo,
-      title: "MongoDB",
-      style: "shadow-green-500",
-    },
-    {
-      id: 8,
+      id: 3,
       src: firebase,
       title: "Firebase",
-      style: "shadow-orange-500",
+      style: "shadow-yellow-500",
     },
+    {
+      id: 3,
+      src: tailwind,
+      title: "Tailwind",
+      style: "shadow-blue-300",
+    },
+
   ];
 
   return (

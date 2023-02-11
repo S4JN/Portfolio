@@ -4,35 +4,47 @@ import disney from "../assets/portfolio/disney.PNG";
 import weather from "../assets/portfolio/weather.png";
 import work from "../assets/portfolio/work.png";
 import whatsapp from "../assets/portfolio/whatsapp.png"
+import crowdFund from "../assets/portfolio/crowdFund.PNG"
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: whatsapp,
+      title: "Whatsapp Clone",
       href: "https://github.com/S4JN/WhatsappWebClone"
-    },  
+    },
     {
       id: 2,
-      src: weather,
-      href: "https://github.com/S4JN/mausam" ,
+      src: crowdFund,
+      title: "Crowd Fund",
+      href: "https://github.com/S4JN/fund-raising-eth"
     },
     {
       id: 3,
-      src: disney,
-      href: "https://github.com/S4JN/Disney-Plus-clone",
+      src: weather,
+      title: "WeatherUP",
+      href: "https://github.com/S4JN/mausam",
     },
     {
       id: 4,
-      src: zoom,
-      href: "https://github.com/S4JN/Zoom2.0"
+      src: disney,
+      title: "Disney2.0",
+      href: "https://github.com/S4JN/Disney-Plus-clone",
     },
     {
       id: 5,
-      src: work,
-      href: "https://github.com/S4JN/kaambatao" ,
+      src: zoom,
+      title: "Zoom2.0",
+      href: "https://github.com/S4JN/Zoom2.0"
     },
-    
+    {
+      id: 6,
+      src: work,
+      title: "WorkIt",
+      href: "https://github.com/S4JN/kaambatao",
+    },
+
   ];
 
   return (
@@ -49,18 +61,17 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, href }) => (
+          {portfolios.map(({ id, src, href, title }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
               />
-              <div className="flex items-center justify-center">
-                {/* <button className="w-1/2 px-6 py-3 m-4 duration-300 hover:scale-105">
-                  Demo
-                </button> */}
-                <a href={href} target="_blank" className="w-1/2 px-12 py-2 m-4  duration-200 hover:scale-105">Code</a>
+              <div className=" truncate pb-2 text-center">
+                <p className=" truncate mt-4 pb-2 text-[18px] font-epilogue">{title}</p>
+                <hr className="opacity-[0.15] mx-8 pb-2 mb-" />
+                <a href={href} target="_blank" className=" text-[12px] text-[#808191] duration-500 hover:text-[14px] hover:scale-15 hover:text-[#fff] truncate">{href.slice(8)}</a>
 
                 {/* <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Code
